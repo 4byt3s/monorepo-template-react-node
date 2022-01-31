@@ -1,0 +1,25 @@
+{
+  "name": "monorepo-nodejs-reactjs",
+  "description": "monorepo template with reactjs and nodejs",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --stream",
+    "dev": "lerna run dev --stream",
+    "build": "lerna run build --build",
+    "prepare": "husky install && git config commit.template .github/GIT_COMMIT_TEMPLATE",
+    "test": "lerna run test --stream"
+  },
+  "keywords": [],
+  "author": "kevfarid",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "husky": "^7.0.4",
+    "lerna": "^4.0.0"
+  }
+}
